@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UIGestureRecognizer+Block.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.backgroundColor = [UIColor redColor];
+    view.center = self.view.center;
+    [self.view addSubview:view];
+    [view addGestureRecognizer:[UITapGestureRecognizer recognizeWithAction:^(id gestrueRecognize) {
+        NSLog(@"点击了 view...");
+    }]];
 }
 
 
