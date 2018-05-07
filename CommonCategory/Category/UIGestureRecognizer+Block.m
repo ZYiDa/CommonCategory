@@ -31,3 +31,4 @@ static const int targetKey;
         block(sender);
     }
 }
+@end
